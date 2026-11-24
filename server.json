@@ -1,0 +1,33 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.pipiads-dev/pipiads",
+  "title": "PipiAds",
+  "description": "Research TikTok and Facebook ads, products, stores and competitors with the PipiAds Open API.",
+  "version": "1.0.5",
+  "websiteUrl": "https://www.pipiads.com/mcp",
+  "packages": [
+    {
+      "registryType": "npm",
+      "registryBaseUrl": "https://registry.npmjs.org",
+      "identifier": "pipiads-mcp-server",
+      "version": "1.0.5",
+      "runtimeHint": "npx",
+      "transport": {
+        "type": "stdio"
+      },
+      "environmentVariables": [
+        {
+          "name": "PIPIADS_API_KEY",
+          "description": "Your PipiAds Open API key from Pipispy. Paid queries consume account credits.",
+          "isRequired": true,
+          "isSecret": true,
+          "format": "string"
+        }
+      ]
+    }
+  ],
+  "repository": {
+    "source": "github",
+    "url": "https://github.com/pipiads-dev/pipiads-mcp-server"
+  }
+}

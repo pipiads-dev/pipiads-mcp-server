@@ -1,0 +1,52 @@
+{
+  "name": "pipiads-mcp-server",
+  "version": "1.0.5",
+  "mcpName": "io.github.pipiads-dev/pipiads",
+  "description": "MCP Server for PipiAds advertising intelligence API",
+  "type": "module",
+  "bin": {
+    "pipiads-mcp-server": "dist/index.js"
+  },
+  "files": [
+    "dist",
+    "skills",
+    "!skills/backup/**"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "typecheck": "tsc --noEmit",
+    "prepack": "npm run build",
+    "test": "npm run build && node --test tests/contracts.test.mjs"
+  },
+  "keywords": [
+    "mcp",
+    "pipiads",
+    "advertising",
+    "tiktok",
+    "facebook",
+    "adspy"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.28.0",
+    "zod": "^3.24.4"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.0",
+    "esbuild": "0.28.2",
+    "typescript": "^5.3.3",
+    "yaml": "2.9.1"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pipiads-dev/pipiads-mcp-server.git"
+  },
+  "homepage": "https://www.pipiads.com/mcp",
+  "bugs": {
+    "url": "https://github.com/pipiads-dev/pipiads-mcp-server/issues"
+  }
+}
